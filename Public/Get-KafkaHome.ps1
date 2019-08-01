@@ -42,5 +42,5 @@ function Get-KafkaHome
         }
     }
 
-    return $($path | Resolve-Path | Select-Object -ExpandProperty Path)
+    return $(Convert-Path $path)
 }

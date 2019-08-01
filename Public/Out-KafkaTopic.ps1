@@ -61,7 +61,7 @@ function Out-KafkaTopic
 		if ($Format -eq 'json') {
 			$convert_obj = {
 				param([object]$obj)
-				return $($obj | ConvertTo-Json -Compress)
+				return $($obj | ConvertTo-Json -Compress -Depth 20)
 			}
 		}
 		else {
